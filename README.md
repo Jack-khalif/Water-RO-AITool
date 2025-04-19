@@ -10,6 +10,29 @@
 
 ---
 
+
+###  Login Page
+
+> For returning users to securely log in.
+
+![Login Page](https://github.com/Jack-khalif/Water-RO-AITool/blob/main/login%20page.png)
+
+---
+
+###  Sign Up Page
+
+> New users can create an account to access the RO design tool.
+
+![Sign Up Page](https://github.com/Jack-khalif/Water-RO-AITool/blob/main/sign%20up%20page.png)
+
+---
+
+###  Dashboard
+
+> Core interface for accessing tools, input parameters, and managing results.
+
+![Dashboard](https://github.com/Jack-khalif/Water-RO-AITool/blob/main/dashboard.png)
+
 ---
 
 ##  Getting Started
@@ -142,37 +165,6 @@ Water-RO-AITool/
 ├── public/
 ├── README.md
 └── LICENSE
-```
-
----
-
----
-
-### 🚪 Login Page
-
-> For returning users to securely log in.
-
-![Login Page](https://github.com/Jack-khalif/Water-RO-AITool/blob/main/login%20page.png)
-
----
-
-### 📝 Sign Up Page
-
-> New users can create an account to access the RO design tool.
-
-![Sign Up Page](https://github.com/Jack-khalif/Water-RO-AITool/blob/main/sign up page.png)
-
----
-
-### 📊 Dashboard
-
-> Core interface for accessing tools, input parameters, and managing results.
-
-![Dashboard](https://github.com/Jack-khalif/Water-RO-AITool/blob/main/dashboard.png)
-
----
-
-
 ---
 
 
