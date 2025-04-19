@@ -1,0 +1,49 @@
+{
+  "name": "ro-system-designer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "init-base": "ts-node scripts/initializeBase.ts"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.10.7",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@langchain/openai": "^0.0.14",
+    "@types/bcrypt": "^5.0.2",
+    "@types/uuid": "^10.0.0",
+    "bcrypt": "^5.1.1",
+    "faiss-node": "^0.5.1",
+    "formidable": "^3.5.1",
+    "framer-motion": "^11.18.2",
+    "langchain": "^0.1.37",
+    "next": "14.1.0",
+    "next-auth": "^4.24.11",
+    "nodemailer": "^6.10.1",
+    "openai": "^4.94.0",
+    "pdf-img-convert": "^1.2.1",
+    "pdf-lib": "^1.17.1",
+    "pdf-parse": "^1.1.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-dropzone": "^14.3.8",
+    "react-icons": "^5.5.0",
+    "sharp": "^0.32.6",
+    "tesseract.js": "^4.1.4",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.4.5",
+    "@types/pdfjs-dist": "^2.10.378",
+    "@types/react": "18.2.15",
+    "@types/sharp": "^0.32.0",
+    "dotenv": "^16.5.0",
+    "prisma": "^5.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.1.6"
+  }
+}
