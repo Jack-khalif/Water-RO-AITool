@@ -17,7 +17,7 @@ A smart, user-friendly web interface designed to guide Davis & Shirtliff enginee
 
 > Clean and minimal entry point to the app.
 
-![Landing Page](https://github.com/Jack-khalif/Water-RO-AITool/blob/main/landing.png)
+![Landing Page](https://github.com/Jack-khalif/Water-RO-AITool/blob/main/landing page.png)
 
 ---
 
@@ -25,7 +25,7 @@ A smart, user-friendly web interface designed to guide Davis & Shirtliff enginee
 
 > For returning users to securely log in.
 
-![Login Page](https://github.com/Jack-khalif/Water-RO-AITool/blob/main/login.png)
+![Login Page](https://github.com/Jack-khalif/Water-RO-AITool/blob/main/login page.png)
 
 ---
 
@@ -33,7 +33,7 @@ A smart, user-friendly web interface designed to guide Davis & Shirtliff enginee
 
 > New users can create an account to access the RO design tool.
 
-![Sign Up Page](https://github.com/Jack-khalif/Water-RO-AITool/blob/main/signup.png)
+![Sign Up Page](https://github.com/Jack-khalif/Water-RO-AITool/blob/main/sign up page.png)
 
 ---
 
