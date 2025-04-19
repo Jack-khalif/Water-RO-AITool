@@ -3,7 +3,7 @@
 ```markdown
 # <img src="./logo.png" alt="Davis & Shirtliff Logo" width="200"/>
 
-#  Davis & Shirtliff Water RO AI Tool
+### Davis & Shirtliff Water RO AI Tool
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
