@@ -1,3 +1,67 @@
+# 💧 Water RO AI Tool
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/status-active-brightgreen)]()
+[![Built With](https://img.shields.io/badge/built_with-React-blue?logo=react)]()
+[![Maintainer](https://img.shields.io/badge/maintainer-Jack--khalif-blue)](https://github.com/Jack-khalif)
+
+A smart, user-friendly web interface designed to guide Davis & Shirtliff engineers and technicians through reverse osmosis (RO) system calculations and design logic.
+
+---
+
+---
+
+## UI Screenshots
+
+### 🏠 Landing Page
+
+> Clean and minimal entry point to the app.
+
+![Landing Page](https://github.com/Jack-khalif/Water-RO-AITool/blob/main/landing.png)
+
+---
+
+### 🚪 Login Page
+
+> For returning users to securely log in.
+
+![Login Page](https://github.com/Jack-khalif/Water-RO-AITool/blob/main/login.png)
+
+---
+
+### 📝 Sign Up Page
+
+> New users can create an account to access the RO design tool.
+
+![Sign Up Page](https://github.com/Jack-khalif/Water-RO-AITool/blob/main/signup.png)
+
+---
+
+### 📊 Dashboard
+
+> Core interface for accessing tools, input parameters, and managing results.
+
+![Dashboard](https://github.com/Jack-khalif/Water-RO-AITool/blob/main/dashboard.png)
+
+---
+
+
+---
+
+## 🚀 Getting Started
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Jack-khalif/Water-RO-AITool.git
+
+# 2. Navigate to the project folder
+cd Water-RO-AITool
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server
+npm start
 
 
 ```markdown
@@ -104,18 +168,7 @@ npm run dev
 
 ---
 
-##  UI Screenshots
 
-### Sign Up Page  
-<img src="./Screenshot 2025-04-19 220320.png" width="500"/>
-
-> Add more screenshots here after uploading:
-> - Landing Page  
-> - Dashboard  
-> - PDF Proposal Preview  
-> - Upload Flow  
-
----
 
 ##  Project Structure
 
