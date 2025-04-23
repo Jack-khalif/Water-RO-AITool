@@ -3,6 +3,7 @@ import csv
 import faiss
 import numpy as np
 import openai
+import sys
 
 # Set your OpenAI API key
 openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -74,6 +75,30 @@ Answer the question using only the information provided above. If you cannot ans
     
     return response.choices[0].message.content
 
+def build_index_from_folder(folder='reference', index_file=INDEX_FILE, mapping_file=MAPPING_FILE, chunk_size=1000):
+    """Ingest docs from reference folder into FAISS index."""
+    chunks, sources = [], []
+    for root, _, files in os.walk(folder):
+        for file in files:
+            path = os.path.join(root, file)
+            ext = os.path.splitext(file)[1].lower()
+            if ext in ['.txt', '.md']:
+                with open(path, 'r', encoding='utf-8') as f:
+                    text = f.read()
+                for i in range(0, len(text), chunk_size):
+                    chunks.append(text[i:i+chunk_size])
+                    sources.append(path)
+    embeddings = np.vstack([get_embedding(c) for c in chunks])
+    idx = faiss.IndexFlatL2(embeddings.shape[1])
+    idx.add(embeddings)
+    faiss.write_index(idx, index_file)
+    with open(mapping_file, 'w', newline='', encoding='utf-8') as f:
+        writer = csv.writer(f)
+        writer.writerow(['chunk', 'source'])
+        for c, s in zip(chunks, sources):
+            writer.writerow([c, s])
+    print(f"Built index with {len(chunks)} chunks.")
+
 def main():
     while True:
         query = input("\nHow may i help today Engineer? (or 'quit' to exit): ")
@@ -101,4 +126,7 @@ def main():
         print(answer)
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) > 1 and sys.argv[1] == '--build':
+        build_index_from_folder()
+    else:
+        main()

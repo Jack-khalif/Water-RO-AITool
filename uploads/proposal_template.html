@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Water Treatment Proposal</title>
+    <style type="text/css">
+        @page { size: 8.27in 11.69in; margin-left: 0.75in; margin-right: 0.75in; margin-top: 0.49in; margin-bottom: 0.24in }
+        p { line-height: 115%; text-align: left; orphans: 2; widows: 2; margin-bottom: 0.1in; direction: ltr; background: transparent }
+        a:link { color: #0563c1; text-decoration: underline }
+    </style>
+</head>
+<body lang="en-US" link="#0563c1" vlink="#800000" dir="ltr">
+<!-- Header images and branding -->
+<img src="public/images/1MzDRuhrCCkofvxHnwwqLDOc1qKIe_Jpp_html_43b9fe96.png" name="image5.png" align="left" hspace="12" width="794" height="68">
+<p align="right"><b>{proposal_number}</b></p>
+<p align="right"><b>{date}</b></p>
+<p><b>{client_name}</b></p>
+<p>Dear Sir/Madam,</p>
+<p align="center"><u><b>PROPOSAL FOR SUPPLY AND INSTALLATION OF WATER TREATMENT PLANT</b></u></p>
+<p>Following the inquiry regarding the above, Davis and Shirtliff wish to present a proposal, terms, and conditions for a solution to treat the client’s borehole water for domestic drinking and use in the laboratory.</p>
+<ol>
+    <li><b>CUSTOMER REQUIREMENTS</b></li>
+</ol>
+<p>Based on the requirement Davis and Shirtliff have provided a water treatment system that can treat <b>{capacity}</b> for domestic use.</p>
+<ol>
+    <ol>
+        <li><b>SITE CONDITIONS</b></li>
+    </ol>
+</ol>
+<p>The water analysis report from Davis & Shirtliff Laboratory (Lab Sample ID: <b>{lab_sample_id}</b>, dated {lab_sample_date}) indicates that all tested parameters were within acceptable limits.</p>
+{parameter_table}
+<ol start="2">
+    <li><b>PROPOSED SOLUTION</b></li>
+</ol>
+<p>Davis & Shirtliff proposes a treatment plant designed to provide a net flow rate of <b>{flow_rate}</b> as requested by the client.</p>
+<p>Below are the unit treatment processes involved.</p>
+<ul>
+    <li><b>Chlorination and oxidation</b></li>
+    <li><b>Filtration</b> - Removal of suspended matter, turbidity, and colour</li>
+    <li><b>Reverse Osmosis</b> - Removal of Dissolved salts</li>
+    <li><b>Post disinfection</b> - Chlorination</li>
+</ul>
+<p><b>Proposed Treatment Layout</b></p>
+<img src="public/images/1MzDRuhrCCkofvxHnwwqLDOc1qKIe_Jpp_html_1d0378a.png" name="image2.png" align="bottom" width="650" height="340" border="0"/>
+<p><b>Proposed Treatment Process</b></p>
+<ul>
+    <li>The incoming water from the borehole shall be dosed with pH plus to adjust the pH to the acceptable levels and chlorine to oxidize and precipitate any dissolved iron and manganese as it goes into an aeration tank (Client’s Scope).</li>
+    <li>In the aeration tank, dissolved iron and manganese are further oxidized through the injection of air into the water through the air distribution system.</li>
+    <li>From the aeration tank, the water overflows into a clarifier tank (Client’s Scope) to allow sedimentation of any suspended particle in the water including the precipitated iron and manganese.</li>
+    <li>The water will then be filtered through <b>PXD Media filter</b> charged with glass to remove the suspended particles and reduce the turbidity to the acceptable before it goes through the <b>Activated Carbon filter</b> to remove any residual chlorine that may damage the RO membranes.</li>
+    <li>To prevent scaling of the RO membranes, it will be important to dose an antiscalant into the water before the water goes into the RO. Genesys antiscalant will, therefore, be continuously added to the system before the RO.</li>
+    <li>The treated water will be dosed with a chlorine for disinfection before storage (Client's scope).</li>
+</ul>
+<p><b>EQUIPMENT</b></p>
+<ul>
+    <li><b>Dayliff Filters</b> – <a href="https://uganda.davisandshirtliff.com/water-treatment/product/pentair-pxd-industrial-water-filters">Dayliff PXD Industrial media filters</a> are specifically designed for filtration applications where higher levels of operating pressure and reliability are demanded. The filter will be charged with glass media of different grades for sediment removal.</li>
+    <li><b>Airmac DBMX single-phase air</b> – <a href="https://www.davisandshirtliff.com/products-and-solutions/product/bioliff-air-blowers">Airmac DBMX Single-phase air blower</a> shall be used to pump air from the atmosphere and through the pipes, diffuser, and into the water for aeration. Equipped with built-in protection devices, safety switches, and thermostats, to protect pumps from any unpredictable diaphragm breaks.</li>
+    <li><b>Disc Diffusers</b> – The disc diffuser bubbles air into the water. They have multiple air-release orifices resulting in improved oxygen transfer efficiency.</li>
+    <li><b>Reverse Osmosis Unit</b> – <a href="https://www.davisandshirtliff.com/products-and-solutions/product/bro4">Reverse Osmosis (DRO4)</a> is a process in which purified water (permeate) is produced from the feed water via the rejection of all organic and inorganic constituents by a semi-permeable membrane system. The RO system separates the incoming feed stream into two effluent streams: permeate (treated water) and concentrate (reject water).</li>
+</ul>
+<img src="public/images/1MzDRuhrCCkofvxHnwwqLDOc1qKIe_Jpp_html_6ddf9c53.png" name="image3.png" align="bottom" width="232" height="77" border="0"/>
+<p><b>INSTALLATION</b></p>
+<table width="682" cellpadding="7" cellspacing="0" border="1">
+    <tr>
+        <td><b>Davis & Shirtliff Ltd Scope</b></td>
+        <td><b>The Client Scope</b></td>
+    </tr>
+    <tr>
+        <td>{dsl_scope}</td>
+        <td>{client_scope}</td>
+    </tr>
+</table>
+<p><b>PRICING</b></p>
+{pricing_table}
+<img src="public/images/1MzDRuhrCCkofvxHnwwqLDOc1qKIe_Jpp_html_8933e44b.jpg" name="image13.jpg" align="bottom" width="650" height="175" border="0"/>
+</body>
+</html>

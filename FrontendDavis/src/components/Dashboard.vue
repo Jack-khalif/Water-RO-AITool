@@ -3,7 +3,7 @@
       <header class="header">
         <div class="nav-left">
           <router-link to="/dashboard" class="nav-link">Dashboard</router-link>
-          <router-link to="/dashboard/proposal-tool" class="nav-link">Proposal Tool</router-link>
+          
           <router-link to="/dashboard/upload-report" class="nav-link">Upload Report</router-link>
         </div>
         <div class="nav-right">

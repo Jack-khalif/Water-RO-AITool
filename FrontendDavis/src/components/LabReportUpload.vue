@@ -21,16 +21,25 @@
         />
       </div>
 
-      <button @click="uploadReport" :disabled="!selectedFile">Upload & Analyze</button>
+      <input v-model="query" placeholder="Enter your query Engineer" class="query-input" />
+      <button @click="handleSubmit" :disabled="!selectedFile || !query || loading">
+        <span v-if="loading">Generating...</span>
+        <span v-else>Generate Proposal</span>
+      </button>
+      <div v-if="error" class="error-msg">{{ error }}</div>
+      <iframe v-if="proposalHtml" :srcdoc="proposalHtml" style="width:100%;height:80vh;border:1px solid #ccc;"></iframe>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-
 const selectedFile = ref<File | null>(null)
 const fileInput = ref<HTMLInputElement | null>(null)
+const loading = ref(false)
+const error = ref<string | null>(null)
+const proposalHtml = ref<string | null>(null)
+const query = ref('')
 
 function onFileChange(event: Event) {
   const files = (event.target as HTMLInputElement).files
@@ -42,10 +51,26 @@ function handleDrop(event: DragEvent) {
   if (files && files.length) selectedFile.value = files[0]
 }
 
-function uploadReport() {
-  if (!selectedFile.value) return
-  // TODO: API integration for OCR
-  console.log('Uploading', selectedFile.value.name)
+async function handleSubmit() {
+  if (!selectedFile.value || !query.value) return
+  loading.value = true
+  error.value = null
+  proposalHtml.value = null
+  try {
+    const formData = new FormData()
+    formData.append('report', selectedFile.value)
+    formData.append('query', query.value)
+    const response = await fetch('/api/generate-proposal', {
+      method: 'POST',
+      body: formData,
+    })
+    if (!response.ok) throw new Error('Failed to generate proposal.')
+    proposalHtml.value = await response.text()
+  } catch (e: any) {
+    error.value = e.message || 'An error occurred.'
+  } finally {
+    loading.value = false
+  }
 }
 </script>
 
