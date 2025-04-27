@@ -14,6 +14,7 @@ const routes = [
   { path: '/contact', component: Contact },
   { path: '/login', component: LoginPage },
   { path: '/signup', component: SignUpPage },
+  { path: '/proposal', component: () => import('../pages/Proposal.vue') },
   {
     path: '/dashboard',
     component: Dashboard,
@@ -29,7 +30,23 @@ const routes = [
       },
     ],
   },
+  {
+    path: '/quotation-preview',
+    name: 'QuotationPreview',
+    component: () => import('../pages/QuotationPreview.vue'),
+  },
+  // Added Quotation Cart route
+  {
+    path: '/quotation-summary',
+    name: 'QuotationSummary',
+    component: () => import('../pages/QuotationSummary.vue'),
+  },
+  {
+    path: '/quotation-cart',
+    component: () => import('../pages/QuotationCart.vue'),
+  },
 ]
+
 
 const router = createRouter({
   history: createWebHistory(),

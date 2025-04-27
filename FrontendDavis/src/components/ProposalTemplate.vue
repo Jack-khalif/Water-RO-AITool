@@ -1,5 +1,5 @@
 <template>
-  <div class="proposal-wrapper">
+  <div class="quotation-wrapper">
     <!-- Paste your existing HTML template here -->
     <h1>{{ params.title }}</h1>
     <!-- ... other dynamic content ... -->

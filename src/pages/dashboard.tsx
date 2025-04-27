@@ -48,24 +48,12 @@ export default function Dashboard() {
             <Text fontSize="xl" textAlign="center" maxW="2xl" mb={12}>
               Select a feature to get started with your water treatment analysis and proposal generation.
             </Text>
-            <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} width="100%">
+            <SimpleGrid columns={1} spacing={10} width="100%">
               <Feature
                 icon={FaWater}
                 title="Lab Report Analysis"
                 text="Upload and analyze water quality parameters from your lab reports automatically."
                 onClick={() => router.push('/upload')}
-              />
-              <Feature
-                icon={FaFlask}
-                title="RO System Design"
-                text="Get AI-powered recommendations for optimal reverse osmosis system design."
-                onClick={() => router.push('/design')}
-              />
-              <Feature
-                icon={FaFileAlt}
-                title="Proposal Generation"
-                text="Generate professional proposals with detailed specifications and pricing."
-                onClick={() => router.push('/proposal')}
               />
             </SimpleGrid>
           </VStack>

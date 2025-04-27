@@ -60,25 +60,42 @@ interface WaterAnalysis {
 export async function analyzeRequirements(analysis: WaterAnalysis) {
   // Create a context-rich prompt for the AI
   const prompt = `
-    Based on the following water analysis and requirements:
-    - TDS: ${analysis.tds} mg/L
-    - pH: ${analysis.ph}
-    - Hardness: ${analysis.hardness} mg/L
-    - Alkalinity: ${analysis.alkalinity} mg/L
-    - Location: ${analysis.location}
-    - Use Case: ${analysis.useCase}
-    ${analysis.industry ? `- Industry: ${analysis.industry}` : ''}
-    - Daily Demand: ${analysis.dailyDemand} m³/day
+Based on the following water analysis and requirements:
+- TDS: ${analysis.tds} mg/L
+- pH: ${analysis.ph}
+- Hardness: ${analysis.hardness} mg/L
+- Alkalinity: ${analysis.alkalinity} mg/L
+- Location: ${analysis.location}
+- Use Case: ${analysis.useCase}
+${analysis.industry ? `- Industry: ${analysis.industry}` : ''}
+- Daily Demand: ${analysis.dailyDemand} m³/day
 
-    Provide recommendations for:
-    1. Pre-treatment requirements
-    2. RO system specifications
-    3. Post-treatment needs
-    4. Maintenance schedule
-    5. Cost estimation
+Provide recommendations in the following JSON format:
+{
+  "pretreatment": {
+    "product": "string (e.g., DMI Filter)",
+    "model": "string (e.g., DMI-25)",
+    "description": "string"
+  },
+  "ro_system": {
+    "model": "string (e.g., RO-250L)",
+    "capacity": "string",
+    "membrane_type": "string",
+    "membrane_count": number,
+    "antiscalant_type": "string"
+  },
+  "posttreatment": {
+    "product": "string (e.g., UV Sterilizer)",
+    "model": "string",
+    "description": "string"
+  },
+  "maintenance_schedule": "string",
+  "cost_estimate": "string",
+  "explanation": "string (explain the choices in simple terms)"
+}
 
-    Consider local water conditions and industry-specific requirements.
-  `;
+Respond ONLY with a valid JSON object. Do not include any extra text. Consider local water conditions and industry-specific requirements.
+`;
 
   try {
     const completion = await openai.createChatCompletion({
@@ -96,10 +113,18 @@ export async function analyzeRequirements(analysis: WaterAnalysis) {
       temperature: 0.7,
     });
 
+    const rawContent = completion.data.choices[0].message?.content || "";
+    let recommendations;
+    try {
+      recommendations = JSON.parse(rawContent);
+    } catch (e) {
+      recommendations = { raw: rawContent, error: "LLM did not return valid JSON." };
+    }
     return {
-      recommendations: completion.data.choices[0].message?.content,
+      recommendations,
       knowledgeBaseContext: getRelevantContext(analysis)
     };
+
   } catch (error) {
     console.error('RAG Service Error:', error);
     throw error;

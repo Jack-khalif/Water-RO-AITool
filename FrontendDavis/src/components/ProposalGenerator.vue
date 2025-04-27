@@ -19,7 +19,7 @@
       </div>
     </transition>
 
-    <!-- Step 2: Enter Query & Generate Proposal -->
+    <!-- Step 2: Enter Query & Generate Quotation Cart -->
     <div v-else-if="step === 2" class="query-step full-page-step">
       <transition name="fade-slide">
         <div class="query-card prominent-query-card animated-card immersive-query-card" v-show="step === 2">
@@ -39,23 +39,23 @@
               <label class="floating-label">Describe what you want to generate</label>
               <transition name="typing-dots"><span v-if="showTypingDots" class="typing-dots">...</span></transition>
             </div>
-            <p class="query-helper">For example: <span class="example">Generate a quotation and proposal for this analysis.</span></p>
+            <p class="query-helper">For example: <span class="example">Generate a quotation and quotation cart for this analysis.</span></p>
             <button class="back-btn" type="button" @click="step = 1">Back</button>
           </form>
         </div>
       </transition>
     </div>
 
-    <!-- Step 3: Show Proposal -->
-    <div v-else-if="step === 3" class="proposal-step">
-      <iframe v-if="proposalHtml" :srcdoc="proposalHtml" style="width:100%;height:80vh;border:1px solid #ccc;"></iframe>
+    <!-- Step 3: Show Quotation Cart -->
+    <div v-else-if="step === 3" class="quotationCartep">
+      <iframe v-if="quotationHtml" :srcdoc="quotationHtml" style="width:100%;height:80vh;border:1px solid #ccc;"></iframe>
       <button class="back-btn" @click="step = 2">Back to Query</button>
     </div>
 
     <!-- Loading Overlay -->
     <div v-if="loading" class="loading-overlay">
       <div class="spinner"></div>
-      <div class="loading-message">Generating your proposal, please wait...</div>
+      <div class="loading-message">Generating your quotation cart, please wait...</div>
     </div>
 
     <div v-if="error" class="error-msg">{{ error }}</div>
@@ -65,10 +65,10 @@
 <script lang="ts" setup>
 import { ref, onMounted, watch } from 'vue';
 
-const step = ref(1); // 1 = upload, 2 = query, 3 = proposal
+const step = ref(1); // 1 = upload, 2 = query, 3 = quotation cart
 const file = ref<File | null>(null);
 const query = ref('');
-const proposalHtml = ref<string | null>(null);
+const quotationHtml = ref<string | null>(null);
 const loading = ref(false);
 const error = ref<string | null>(null);
 
@@ -111,18 +111,18 @@ async function handleSubmit() {
   if (!file.value || !query.value) return;
   loading.value = true;
   error.value = null;
-  proposalHtml.value = null;
+  quotationHtml.value = null;
   try {
     const formData = new FormData();
     formData.append('report', file.value);
     formData.append('query', query.value);
 
-    const response = await fetch('/api/generate-proposal', {
+    const response = await fetch('/api/generate-quotation-cart', {
       method: 'POST',
       body: formData,
     });
-    if (!response.ok) throw new Error('Failed to generate proposal.');
-    proposalHtml.value = await response.text();
+    if (!response.ok) throw new Error('Failed to generate quotation cart.');
+    quotationHtml.value = await response.text();
     step.value = 3;
   } catch (e: any) {
     error.value = e.message || 'An error occurred.';
@@ -421,7 +421,7 @@ async function handleSubmit() {
   text-decoration: underline;
 }
 
-.proposal-step {
+.quotationCartep {
   display: flex;
   flex-direction: column;
   align-items: center;

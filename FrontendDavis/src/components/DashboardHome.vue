@@ -6,11 +6,6 @@
         <p>Start by uploading the water lab report (PDF/image)</p>
       </router-link>
 
-      <router-link class="option-card" to="/dashboard/proposal-tool">
-        <h3>Proposal Tool</h3>
-        <p>Generate water treatment proposals</p>
-      </router-link>
-
       <!-- More tools can be added here -->
     </div>
   </div>
@@ -51,4 +46,5 @@
   transform: translateY(-5px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
+
 </style>

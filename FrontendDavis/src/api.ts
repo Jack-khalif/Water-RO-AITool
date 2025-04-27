@@ -11,19 +11,3 @@ export async function uploadLabReport(file: File, token?: string) {
   return response.data
 }
 
-export async function analyzeLabReport({ lab_report, user_requirements, image_path, token }: {
-  lab_report?: string,
-  user_requirements: Record<string, any>,
-  image_path?: string,
-  token?: string
-}) {
-  const headers: Record<string, string> = { 'Content-Type': 'application/json' }
-  if (token) headers['Authorization'] = `Bearer ${token}`
-  const response = await axios.post(`${API_BASE}/analyze`, {
-    lab_report,
-    user_requirements,
-    image_path,
-    generate_multiple_designs: true
-  }, { headers })
-  return response.data
-}

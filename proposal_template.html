@@ -165,7 +165,36 @@ body { position: relative; }
     </tr>
 </table>
 <p><b>PRICING</b></p>
-{pricing_table}
+<h3>Quotation Summary</h3>
+{% for section, items in cart_sections.items() %}
+  <h4>{{ section }}</h4>
+  <table style="width:100%; border-collapse:collapse; border:1px solid #aaa;">
+    <tr>
+      <th style="border:1px solid #aaa; padding:4px;">Product</th>
+      <th style="border:1px solid #aaa; padding:4px;">Model</th>
+      <th style="border:1px solid #aaa; padding:4px;">Quantity</th>
+      <th style="border:1px solid #aaa; padding:4px;">Unit Price</th>
+      <th style="border:1px solid #aaa; padding:4px;">Total Price</th>
+    </tr>
+    {% for item in items %}
+      <tr>
+        <td style="border:1px solid #aaa; padding:4px;">{{ item.product_name }}</td>
+        <td style="border:1px solid #aaa; padding:4px;">{{ item.model_number }}</td>
+        <td style="border:1px solid #aaa; padding:4px;">{{ item.quantity }}</td>
+        <td style="border:1px solid #aaa; padding:4px;">{{ item.unit_price }}</td>
+        <td style="border:1px solid #aaa; padding:4px;">{{ item.total_price }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endfor %}
+<p><b>Grand Total:</b> {{ cart_total }}</p>
+
+<!-- LLM Summary and Rationale Box -->
+<div style="margin: 30px 0; padding: 16px; border: 2px solid #0074d9; border-radius: 8px; background: #f5faff;">
+  <h3 style="margin-top:0;">Summary &amp; Rationale</h3>
+  <p><b>Summary:</b> {{ llm_summary }}</p>
+  <p><b>Rationale:</b> {{ llm_rationale }}</p>
+</div>
 
 <!-- Bank Details Section (new page) -->
 

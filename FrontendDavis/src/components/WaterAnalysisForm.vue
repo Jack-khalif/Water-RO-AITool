@@ -37,7 +37,7 @@
       <small>(Coming soon: OCR-powered AI upload)</small>
     </div>
 
-    <button @click="analyzeWater">Analyze & Generate Proposal</button>
+    <button @click="analyzeWater">Generate Proposal</button>
 
     <ProposalSummary v-if="proposal" :proposal="proposal" />
   </div>
