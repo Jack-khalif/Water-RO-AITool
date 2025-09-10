@@ -20,18 +20,18 @@ An AI-powered platform that automates **reverse osmosis (RO)** system sizing, pr
 
 ---
 
-## ⚡ Key Features
+##  Key Features
 
-- 🔐 OTP-based email authentication
-- 📄 Upload water lab reports (PDF/text/image)
-- ⚙️ Auto-generate RO design with tier options (Economy, Standard, Premium)
-- 🧠 LangChain + OpenAI-powered analysis and proposal writing
-- 🧾 One-click professional PDF generation for client quotes
-- 📊 Dashboard interface for managing sessions and output
+-  OTP-based email authentication
+- Upload water lab reports (PDF/text/image)
+-  Auto-generate RO design with tier options (Economy, Standard, Premium)
+- LangChain + OpenAI-powered analysis and proposal writing
+- One-click professional PDF generation for client quotes
+-  Dashboard interface for managing sessions and output
 
 ---
 
-## 🖥️ UI Walkthrough
+##  UI Walkthrough
 
 > A quick preview of the sleek, production-ready interface.
 
@@ -64,7 +64,7 @@ An AI-powered platform that automates **reverse osmosis (RO)** system sizing, pr
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the Repository
 
@@ -117,9 +117,9 @@ npm run dev
 
 ---
 
-## 🧠 Technical Overview & Methodology
+##  Technical Overview & Methodology
 
-### ⚙️ Architecture Overview
+### Architecture Overview
 
 ```
 User Interface (Vue 3 + Vite)
@@ -137,7 +137,7 @@ Output: RO System Design + PDF Proposal
 
 ---
 
-### 🧩 Technologies Explained
+### Technologies Explained
 
 #### 🔧 Frontend — *Vue 3 + Vite*
 
@@ -145,25 +145,25 @@ Output: RO System Design + PDF Proposal
 * Built with **TailwindCSS** for rapid responsive design
 * OTP-based **email auth** integration
 
-#### 🧠 Backend — *Node.js + Express*
+#### Backend — *Node.js + Express*
 
 * API routes for user auth, uploads, LangChain logic
 * Handles OpenAI prompts and returns AI responses
 * Supports email validation and secured sessions
 
-#### 📚 LangChain — *RAG AI Workflow*
+#### LangChain — *RAG AI Workflow*
 
 * Parses and chunks uploaded reports (PDFs or images)
 * Uses **Retrieval-Augmented Generation** (RAG)
 * Generates contextual prompts based on extracted text
 
-#### 🧠 FAISS — *Semantic Search*
+#### FAISS — *Semantic Search*
 
 * Stores embedded chunks from uploaded reports
 * Enables **fast, relevant context retrieval** for prompts
 * Boosts performance and reliability of GPT responses
 
-#### 💬 OpenAI — *LLM-Powered Proposal Generator*
+####  OpenAI — *LLM-Powered Proposal Generator*
 
 * GPT-4/GPT-3.5 used to:
 
@@ -171,7 +171,7 @@ Output: RO System Design + PDF Proposal
   * Write full proposal content
   * Explain treatment logic (TDS, hardness, etc.)
 
-#### 📄 PDF Proposal Generator
+####  PDF Proposal Generator
 
 * Populates professional PDF templates using AI-generated content
 * Supports branding and pricing logic per RO tier
@@ -179,7 +179,7 @@ Output: RO System Design + PDF Proposal
 
 ---
 
-## 🧪 Core Workflow
+## Core Workflow
 
 1. **Upload Water Report** (PDF/Image/Text)
 2. **Extract Content** → Indexed with FAISS
@@ -189,7 +189,7 @@ Output: RO System Design + PDF Proposal
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Water-RO-AITool/
@@ -207,7 +207,7 @@ Water-RO-AITool/
 
 ---
 
-## 🛠 Dev Scripts
+## Dev Scripts
 
 | Task           | Command                     |
 | -------------- | --------------------------- |
@@ -218,7 +218,7 @@ Water-RO-AITool/
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork this repository
 2. Create your feature branch: `git checkout -b feature/your-feature`
@@ -228,13 +228,13 @@ Water-RO-AITool/
 
 ---
 
-## 📜 License
+##  License
 
 This project is licensed under the **MIT License**.
 See [`LICENSE`](./LICENSE) for full details.
 
 ---
 
-> *Developed with 💙 to empower water engineers with smarter, faster tools.*
+> *Developed with love(blue heart) to empower water engineers with smarter, faster tools.*
 
 ```
