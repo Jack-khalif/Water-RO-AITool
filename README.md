@@ -1,10 +1,10 @@
 
 #  Water RO AI Tool
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Status](https://img.shields.io/badge/status-active-brightgreen)]()
 [![Built With](https://img.shields.io/badge/built_with-Vue3-blue?logo=vue.js)]()
 [![Maintainer](https://img.shields.io/badge/maintainer-Jack--khalif-blue)](https://github.com/Jack-khalif)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/status-active-brightgreen)]()
+
 
 An AI-powered platform that automates **reverse osmosis (RO)** system sizing, proposal generation, and water lab report analysis — built for **Davis & Shirtliff** engineers and technicians.
 
