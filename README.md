@@ -139,7 +139,7 @@ Output: RO System Design + PDF Proposal
 
 ### Technologies Explained
 
-#### 🔧 Frontend — *Vue 3 + Vite*
+####  Frontend — *Vue 3 + Vite*
 
 * Modern **Composition API** for modular and scalable UI
 * Built with **TailwindCSS** for rapid responsive design
