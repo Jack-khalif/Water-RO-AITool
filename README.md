@@ -10,7 +10,7 @@ An AI-powered platform that automates **reverse osmosis (RO)** system sizing, pr
 
 ---
 
-## 🎥 Demo Video
+##  Demo Video
 
 > Watch the full walk-through of the AI-powered RO design platform:
 
