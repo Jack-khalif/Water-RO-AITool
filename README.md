@@ -1,8 +1,11 @@
 
 #  Water RO AI Tool
-[![Built With](https://img.shields.io/badge/built_with-Vue3-blue?logo=vue.js)]()
 [![Maintainer](https://img.shields.io/badge/maintainer-Jack--khalif-blue)](https://github.com/Jack-khalif)
+
+[![Built With](https://img.shields.io/badge/built_with-Vue3-blue?logo=vue.js)]()
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 [![Status](https://img.shields.io/badge/status-active-brightgreen)]()
 
 
