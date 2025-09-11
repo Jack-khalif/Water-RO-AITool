@@ -88,7 +88,7 @@ cp .env.example .env.local
 #### Frontend (`.env.local`):
 
 ```env
-VITE_OPENAI_KEY=your_openai_key
+VITE_OPENAI_KEY
 VITE_API_BASE_URL=http://localhost:3000/api
 ```
 
