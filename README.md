@@ -26,7 +26,7 @@ An AI-powered platform that automates **reverse osmosis (RO)** system sizing, pr
 - Upload water lab reports (PDF/text/image)
 -  Auto-generate RO design with tier options (Economy, Standard, Premium)
 - LangChain + OpenAI-powered analysis and proposal writing
-- One-click professional PDF generation for client quotes
+- One-click professional PDF generation for client quotes for both clients and Sales Engineers
 -  Dashboard interface for managing sessions and output
 
 ---
