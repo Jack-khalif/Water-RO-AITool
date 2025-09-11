@@ -96,7 +96,7 @@ VITE_API_BASE_URL=http://localhost:3000/api
 
 ```env
 OPENAI_API_KEY=your_key
-DATABASE_URL=your_mongo_url
+
 SMTP_HOST=your_smtp_host
 SMTP_PORT=your_port
 EMAIL_USER=your_email
